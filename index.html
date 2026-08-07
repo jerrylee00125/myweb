@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="zh-Hant-TW" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="李志恩的個人作品網站，收錄資料科學、病理科 RAG 與 AI Agent 專題、工作經歷、ICDL 證照、攝影及空拍作品。">
+    <meta name="theme-color" content="#f2ecde">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:title" content="李志恩｜資料科學、病理 RAG 與影像紀錄">
+    <meta property="og:description" content="在一張自由探索的研究筆記中，認識李志恩的資料科學專題、經歷與攝影作品。">
+    <meta property="og:url" content="https://jerrylee00125.github.io/myweb/">
+    <meta property="og:image" content="https://jerrylee00125.github.io/myweb/images/og-portfolio.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>李志恩｜自由探索筆記</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="preload" href="images/pic01.jpg" as="image">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  </head>
+  <body class="canvas-page">
+    <a class="skip-link" href="#canvas-world">跳至主要內容</a>
+
+    <noscript>
+      <div class="hero-note" role="note">JavaScript 目前未啟用，以下內容會改以一般閱讀順序呈現。</div>
+    </noscript>
+
+    <div class="intro-modal" data-intro-modal role="dialog" aria-modal="true" aria-labelledby="intro-title" aria-hidden="true" inert>
+      <section class="intro-card">
+        <p class="eyebrow">Welcome to my field notes</p>
+        <h2 id="intro-title">這是一張可以探索的畫布。</h2>
+        <p>從中央開始，拖動畫面看見我的學習、工作、病理科專題與影像紀錄。</p>
+        <div class="intro-gestures" aria-label="操作方式">
+          <div><strong aria-hidden="true">↔</strong><span><b>拖曳</b><br>移動畫布</span></div>
+          <div><strong aria-hidden="true">＋</strong><span><b>縮放</b><br>看更多細節</span></div>
+          <div><strong aria-hidden="true">⌘</strong><span><b>選單</b><br>直接前往主題</span></div>
+        </div>
+        <div class="intro-actions">
+          <button class="primary" type="button" data-intro-start>開始探索</button>
+        </div>
+      </section>
+    </div>
+
+    <a class="canvas-chrome brand-badge" href="index.html" aria-label="回到李志恩個人網站首頁">
+      <strong>李志恩<small>JERRY LEE · FIELD NOTES</small></strong>
+    </a>
+    <p class="canvas-chrome canvas-status" data-canvas-status aria-live="polite">目前位置：首頁</p>
+
+    <button class="canvas-chrome menu-toggle" type="button" data-menu-toggle aria-controls="canvas-drawer" aria-expanded="false">
+      <span>目錄</span>
+    </button>
+
+    <button class="drawer-backdrop" type="button" data-drawer-backdrop aria-label="關閉目錄"></button>
+    <nav class="canvas-drawer" id="canvas-drawer" data-canvas-drawer aria-label="探索目錄" aria-hidden="true" inert>
+      <div class="drawer-head">
+        <div>
+          <p class="eyebrow">INDEX / 目錄</p>
+          <h2>想先看哪裡？</h2>
+        </div>
+        <button class="drawer-close" type="button" data-drawer-close aria-label="關閉目錄">×</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html" data-focus-target="home">探索起點</a></li>
+        <li><a href="#about" data-focus-target="about">關於我</a></li>
+        <li><a href="#work" data-focus-target="work">工作經歷</a></li>
+        <li><a href="#credentials" data-focus-target="credentials">專業證照</a></li>
+        <li><a href="#project" data-focus-target="project">病理科 RAG 專題</a></li>
+        <li><a href="#photo" data-focus-target="photo">攝影紀實</a></li>
+        <li><a href="#drone" data-focus-target="drone">空拍紀實</a></li>
+        <li><a href="#contact" data-focus-target="contact">聯絡方式</a></li>
+      </ul>
+      <p class="drawer-tip">也可以使用方向鍵移動，按 Home 回到中央；按 Esc 關閉這張目錄。</p>
+    </nav>
+
+    <aside class="canvas-chrome minimap" aria-label="畫布小地圖">
+      <strong>YOU ARE HERE / 目前位置</strong>
+      <div class="minimap-world" data-minimap-world>
+        <span class="minimap-viewport" data-minimap-viewport aria-hidden="true"></span>
+      </div>
+    </aside>
+
+    <div class="canvas-chrome canvas-controls" aria-label="畫布縮放控制">
+      <button type="button" data-zoom-in aria-label="放大畫布">＋</button>
+      <button type="button" data-zoom-out aria-label="縮小畫布">−</button>
+      <button type="button" data-reset-view aria-label="回到探索起點">⌂</button>
+    </div>
+
+    <main class="canvas-app" id="main-content">
+      <div class="canvas-viewport" data-canvas-viewport tabindex="0" aria-label="可拖曳與縮放的個人作品探索畫布。使用方向鍵移動，加減鍵縮放。">
+        <div class="canvas-world" id="canvas-world" data-canvas-world>
+          <div class="canvas-decoration deco-title" aria-hidden="true">DATA × PEOPLE × IMAGES</div>
+          <div class="canvas-decoration deco-line one" aria-hidden="true"></div>
+          <div class="canvas-decoration deco-line two" aria-hidden="true"></div>
+          <div class="canvas-decoration deco-paperclip" aria-hidden="true"></div>
+          <div class="canvas-decoration deco-grid-scrap" aria-hidden="true"></div>
+          <div class="canvas-decoration deco-stamp" aria-hidden="true"><span>DATA</span><b>IMAGE</b><span>ARCHIVE</span></div>
+          <div class="canvas-decoration deco-ruler" aria-hidden="true"></div>
+          <div class="canvas-decoration deco-thread" aria-hidden="true"></div>
+          <div class="canvas-decoration deco-tabs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+          <section class="canvas-node home-node" data-canvas-node="home" data-node-title="探索起點">
+            <div class="canvas-card hero-card">
+              <div>
+                <p class="eyebrow">Portfolio / 2026</p>
+                <h1>李志恩</h1>
+                <p class="latin-name">Jerry Lee</p>
+                <p class="lead">資料科學的邏輯、病理科知識的檢索，以及影像紀錄的視角，都在這張筆記裡交會。</p>
+                <ul class="tag-list" aria-label="主要領域">
+                  <li>Data Science</li>
+                  <li>LLM / RAG</li>
+                  <li>AI Agent</li>
+                  <li>Photography</li>
+                </ul>
+                <p class="hand-note" style="margin-top: 1.25rem;">拖曳或開啟目錄，從任一方向開始探索 ↗</p>
+              </div>
+              <figure class="hero-portrait">
+                <img src="images/pic01.jpg" width="400" height="500" alt="李志恩個人正面照">
+              </figure>
+            </div>
+            <a class="route-arrow route-arrow--about" href="#about" data-focus-target="about" aria-label="下一站：關於我">
+              <span class="route-number" aria-hidden="true">01</span><span class="route-pointer" aria-hidden="true"></span>
+            </a>
+          </section>
+
+          <section class="canvas-node about-node" id="about" data-canvas-node="about" data-node-title="關於我">
+            <div class="canvas-card">
+              <p class="eyebrow">01 / ABOUT ME</p>
+              <h2>關於我</h2>
+              <div class="about-grid">
+                <div>
+                  <p><b>我的核心優勢：</b></p>
+                  <ul class="strength-list">
+                    <li>熟悉程式開發，也具備文書處理與美編排版能力。</li>
+                    <li>主動挖掘新技術與問題的解答。</li>
+                    <li>重視細節，以耐心與責任感完成任務。</li>
+                    <li>樂於協助他人，提供穩定可靠的團隊支援。</li>
+                  </ul>
+                  <ul class="chip-list" style="margin-top: 1rem;" aria-label="技能摘要">
+                    <li>Python</li><li>R</li><li>JAVA</li><li>SQL</li><li>HTML / CSS</li>
+                  </ul>
+                  <div class="canvas-actions">
+                    <a class="cta-link" href="about.html">翻開完整自我介紹 <span aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="route-arrow route-arrow--work" href="#work" data-focus-target="work" aria-label="下一站：工作經歷">
+              <span class="route-number" aria-hidden="true">02</span><span class="route-pointer" aria-hidden="true"></span>
+            </a>
+          </section>
+
+          <section class="canvas-node work-node" id="work" data-canvas-node="work" data-node-title="工作經歷">
+            <div class="canvas-decoration deco-field-label" aria-hidden="true"><span>FIELD NOTES</span><strong>2026</strong></div>
+            <div class="canvas-card">
+              <p class="eyebrow">02 / EXPERIENCE</p>
+              <h2>工作經歷</h2>
+              <div class="timeline-mini">
+                <article>
+                  <time datetime="2025-07">2025.07 — 2025.08</time>
+                  <h3>潮州地政事務所</h3>
+                  <p>2025 屏東縣公部門暑期工讀，進行地籍資料整理、檔案校對與掃描，共 320 小時。</p>
+                </article>
+                <article>
+                  <time datetime="2025-09">2025.09 — NOW</time>
+                  <h3>靜宜大學職涯發展暨產業促進處</h3>
+                  <p>協助活動、文書編輯、海報設計、資料歸檔與經費統計。</p>
+                </article>
+                <article>
+                  <time datetime="2026-07">2026.07 — 2026.08</time>
+                  <h3>潮州地政事務所</h3>
+                  <p>2026 屏東縣公部門暑期工讀，協助地籍資料整理、檔案掃描與修復，共 320 小時。</p>
+                </article>
+              </div>
+              <div class="canvas-actions">
+                <a class="cta-link" href="work.html">查看工作筆記 <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <a class="route-arrow route-arrow--credentials" href="#credentials" data-focus-target="credentials" aria-label="下一站：專業證照">
+              <span class="route-number" aria-hidden="true">03</span><span class="route-pointer" aria-hidden="true"></span>
+            </a>
+          </section>
+
+          <section class="canvas-node credentials-node" id="credentials" data-canvas-node="credentials" data-node-title="專業證照">
+            <div class="canvas-card">
+              <p class="eyebrow">03 / CERTIFICATE</p>
+              <h2>ICDL 證照</h2>
+              <div class="cert-stack" aria-hidden="true">
+                <img src="images/ICDL_WORD.jpg" width="597" height="840" alt="">
+                <img src="images/ICDL_EXCEL.jpg" width="488" height="689" alt="">
+                <img src="images/ICDL_PPT.jpg" width="591" height="838" alt="">
+              </div>
+              <ul class="plain-list">
+                <li>Word Processing</li>
+                <li>Spreadsheets</li>
+                <li>Presentation</li>
+              </ul>
+              <div class="canvas-actions">
+                <a class="cta-link" href="icdl.html">檢視三張證照 <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <a class="route-arrow route-arrow--project" href="#project" data-focus-target="project" aria-label="下一站：病理科專題">
+              <span class="route-number" aria-hidden="true">04</span><span class="route-pointer" aria-hidden="true"></span>
+            </a>
+          </section>
+
+          <section class="canvas-node project-node" id="project" data-canvas-node="project" data-node-title="病理科 RAG 專題" data-focus-offset-x="105" data-focus-offset-y="-80">
+            <aside class="sticky-note note-two" aria-label="目前專注方向">
+              CURRENT FOCUS<br><br>
+              LLM + RAG + AI Agent<br>
+              病理科檢索問答輔助系統
+            </aside>
+            <div class="canvas-card project-grid">
+              <div>
+                <p class="eyebrow">04 / GRADUATION PROJECT · IN PROGRESS</p>
+                <h2>病理科檢索問答<br>輔助系統</h2>
+                <p>本專題結合 RAG 檢索問答與 AI Agent，協助醫院病理科快速查找流程、表單與儀器資料。使用者只要用日常語言提問，系統會自動判斷需求、搜尋相關文件，並附上資料來源。</p>
+                <ul class="tag-list" aria-label="專題技術">
+                  <li>LLM</li><li>RAG</li><li>LangChain</li><li>AI Agent</li><li>Pathology</li>
+                </ul>
+                <div class="canvas-actions">
+                  <a class="cta-link" href="https://github.com/Jerry-Lee-0125/RAG_Agent" target="_blank" rel="noopener noreferrer">前往 GitHub 專題 <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+            <a class="route-arrow route-arrow--photo" href="#photo" data-focus-target="photo" aria-label="下一站：攝影紀實">
+              <span class="route-number" aria-hidden="true">05</span><span class="route-pointer" aria-hidden="true"></span>
+            </a>
+          </section>
+
+          <section class="canvas-node photo-node" id="photo" data-canvas-node="photo" data-node-title="攝影紀實">
+            <div class="film-decoration photo-film-strip" aria-hidden="true">
+              <span class="film-frame"></span>
+              <span class="film-frame"></span>
+              <span class="film-frame"></span>
+            </div>
+            <div class="canvas-card">
+              <p class="eyebrow">05 / PHOTOGRAPHY</p>
+              <h2>攝影紀實</h2>
+              <p>平常除了寫程式，最喜歡的就是拿起相機四處拍照。這對我來說不只是興趣，更是一種觀察生活的方法。</p>
+              <div class="photo-collage" aria-label="攝影作品精選">
+                <img src="images/photo/005.jpg" width="333" height="500" loading="lazy" decoding="async" alt="攝影作品精選一">
+                <img src="images/photo/011.jpg" width="500" height="750" loading="lazy" decoding="async" alt="攝影作品精選二">
+                <img src="images/photo/016.jpg" width="333" height="500" loading="lazy" decoding="async" alt="攝影作品精選三">
+              </div>
+              <div class="canvas-actions">
+                <a class="cta-link" href="photo.html">打開攝影作品 <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <a class="route-arrow route-arrow--drone" href="#drone" data-focus-target="drone" aria-label="下一站：空拍紀實">
+              <span class="route-number" aria-hidden="true">06</span><span class="route-pointer" aria-hidden="true"></span>
+            </a>
+          </section>
+
+          <section class="canvas-node drone-node" id="drone" data-canvas-node="drone" data-node-title="空拍紀實">
+            <div class="film-decoration film-tail" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div class="canvas-card drone-card">
+              <p class="eyebrow">06 / DRONE DOCUMENTARY</p>
+              <h2>空拍紀實：<br>瞰見屏東</h2>
+              <img class="drone-cover" src="images/pic05.jpg" width="889" height="500" loading="lazy" decoding="async" alt="空拍視角下的大鵬灣跨海大橋">
+              <p>大學通識課〈無人機生態影像解析〉的成果。身為屏東人，我想用不一樣的角度看看家鄉。</p>
+              <div class="canvas-actions">
+                <a class="cta-link" href="drone_photography.html">閱讀空拍紀實 <span aria-hidden="true">→</span></a>
+                <a class="text-link" href="https://youtu.be/XSK-LFojM4U?si=S8cscZqpw8Ih3vBh" target="_blank" rel="noopener noreferrer">觀看空拍影片 ↗</a>
+              </div>
+            </div>
+            <a class="route-arrow route-arrow--contact" href="#contact" data-focus-target="contact" aria-label="下一站：聯絡方式">
+              <span class="route-number" aria-hidden="true">07</span><span class="route-pointer" aria-hidden="true"></span>
+            </a>
+          </section>
+
+          <section class="canvas-node contact-node" id="contact" data-canvas-node="contact" data-node-title="聯絡方式">
+            <div class="canvas-card contact-grid">
+              <div>
+                <p class="eyebrow">07 / CONTACT</p>
+                <h2>聯絡我</h2>
+                <ul class="contact-list">
+                  <li><span class="icon" aria-hidden="true">⌂</span><span>433303 臺中市沙鹿區臺灣大道 7 段 200 號 思高學苑<br>BOSCO Hall, 200, Sec. 7, Taiwan Boulevard, Shalu Dist., Taichung City 433303 Taiwan</span></li>
+                  <li><span class="icon" aria-hidden="true">☎</span><a href="tel:+886911805297">0911-805-297</a></li>
+                  <li><span class="icon" aria-hidden="true">✉</span><span><a href="mailto:lzhien85@gmail.com">lzhien85@gmail.com</a><br><a href="mailto:s1120566@o365st.pu.edu.tw">s1120566@o365st.pu.edu.tw</a></span></li>
+                </ul>
+              </div>
+              <div>
+                <p class="hand-note">Let's connect!</p>
+                <ul class="social-list" style="margin-top:1rem;">
+                  <li><a href="https://www.facebook.com/profile.php?id=100008253257148" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://www.instagram.com/lzhien_0125/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/Jerry-Lee-0125" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+                </ul>
+                <p style="margin-top:2rem;color:var(--muted);font-size:.78rem;">© 2026 Jerry Lee.<br>Original portfolio design.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/js/site.js" defer></script>
+  </body>
+</html>
