@@ -399,7 +399,7 @@ button {
 .hero-card h1 {
   margin-bottom: 0.45rem;
   font-size: clamp(4.5rem, 8vw, 7.6rem);
-  letter-spacing: -0.09em;
+  letter-spacing: 0.04em;
 }
 
 .hero-card .latin-name {
