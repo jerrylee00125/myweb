@@ -1097,6 +1097,55 @@ button {
   font-size: 1rem;
 }
 
+.sticky-note.note-work {
+  top: -86px;
+  left: -168px;
+  width: 300px;
+  min-height: 112px;
+  padding: 2rem 1.4rem 1.15rem;
+  --r: -4deg;
+  background: #efd16d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.sticky-note.note-about {
+  top: -14px;
+  right: -52px;
+  width: 236px;
+  min-height: 150px;
+  padding: 1.9rem 1.3rem 1.15rem;
+  --r: 3deg;
+  background: #a9c8d9;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.sticky-note.note-photo {
+  top: -20px;
+  right: -80px;
+  width: 230px;
+  min-height: 126px;
+  padding: 2rem 1.25rem 1.1rem;
+  --r: 4deg;
+  background: #f2c1b1;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.sticky-note.note-drone {
+  top: -32px;
+  right: -102px;
+  width: 260px;
+  min-height: 146px;
+  padding: 1.9rem 1.35rem 1.1rem;
+  --r: 3deg;
+  background: #b8d1df;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
 .canvas-chrome {
   position: fixed;
   z-index: 1000;
@@ -2098,6 +2147,42 @@ body.lightbox-open {
     min-height: 165px;
     padding: 1.5rem 1.1rem 1rem;
     font-size: 0.92rem;
+  }
+
+  .sticky-note.note-work {
+    top: -82px;
+    left: 34px;
+    width: 250px;
+    min-height: 96px;
+    padding: 1.7rem 1.1rem 1rem;
+    font-size: 0.92rem;
+  }
+
+  .sticky-note.note-about {
+    top: -88px;
+    right: 28px;
+    width: 205px;
+    min-height: 122px;
+    padding: 1.6rem 1rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .sticky-note.note-photo {
+    top: -88px;
+    right: 26px;
+    width: 205px;
+    min-height: 102px;
+    padding: 1.7rem 1rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .sticky-note.note-drone {
+    top: -96px;
+    right: 28px;
+    width: 225px;
+    min-height: 116px;
+    padding: 1.6rem 1.05rem 0.9rem;
+    font-size: 0.9rem;
   }
 
   .deco-field-label,
