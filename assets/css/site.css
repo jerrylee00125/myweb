@@ -594,6 +594,12 @@ button {
   font-weight: 900;
 }
 
+.visit-counter {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 .social-list {
   display: grid;
   gap: 0.7rem;
