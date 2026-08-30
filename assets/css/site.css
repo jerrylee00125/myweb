@@ -600,6 +600,29 @@ button {
   font-size: 0.78rem;
 }
 
+.visit-counter-icon {
+  position: relative;
+  display: inline-block;
+  width: 0.85rem;
+  height: 0.72rem;
+  margin-right: 0.38rem;
+  border-bottom: 1px solid currentColor;
+  border-left: 1px solid currentColor;
+  vertical-align: -0.04rem;
+  opacity: 0.62;
+}
+
+.visit-counter-icon::before {
+  content: "";
+  position: absolute;
+  right: 0.12rem;
+  bottom: 0.1rem;
+  width: 0.11rem;
+  height: 0.28rem;
+  background: currentColor;
+  box-shadow: -0.22rem -0.11rem 0 currentColor, -0.44rem 0.05rem 0 currentColor;
+}
+
 .social-list {
   display: grid;
   gap: 0.7rem;
