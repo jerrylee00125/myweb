@@ -569,11 +569,33 @@
     });
   }
 
+  async function initVisitCounter() {
+    const counter = document.querySelector("[data-visit-counter]");
+    const count = counter?.querySelector("[data-visit-count]");
+    if (!counter || !count) return;
+
+    try {
+      const response = await fetch("https://jerrylee-web.goatcounter.com/counter/TOTAL.json", {
+        credentials: "omit",
+      });
+      if (!response.ok) return;
+
+      const data = await response.json();
+      if (typeof data.count !== "string" || !data.count.trim()) return;
+
+      count.textContent = data.count.trim();
+      counter.hidden = false;
+    } catch (_error) {
+      // Keep the optional counter hidden when the service is blocked or unavailable.
+    }
+  }
+
   function init() {
     initIntro();
     initCanvas();
     initDetailMenu();
     initLightbox();
+    initVisitCounter();
   }
 
   if (document.readyState === "loading") {
