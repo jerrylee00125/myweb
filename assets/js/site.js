@@ -575,7 +575,8 @@
     if (!counter || !count) return;
 
     try {
-      const response = await fetch("https://jerrylee-web.goatcounter.com/counter/TOTAL.json", {
+      const response = await fetch("https://jerrylee-web.goatcounter.com/counter/TOTAL.json?start=2026-01-01", {
+        cache: "no-store",
         credentials: "omit",
       });
       if (!response.ok) return;
